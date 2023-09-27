@@ -141,6 +141,13 @@ add_executable(${PROJECT_NAME}_node
     ""
     )
 
+
+# adding static transform code
+find_package(tf2_ros REQUIRED)
+include_directories(${tf2_ros_INCLUDE_DIRS})
+add_executable(tf2_broadcast livox_ros_driver/tf2_broadcast.cpp)
+target_link_libraries(tf2_broadcast  ${catkin_LIBRARIES} )
+
 #---------------------------------------------------------------------------------------
 # precompile macro and compile option
 #---------------------------------------------------------------------------------------
