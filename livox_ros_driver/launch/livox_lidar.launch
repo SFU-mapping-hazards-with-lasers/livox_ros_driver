@@ -30,7 +30,7 @@
 	      type="livox_ros_driver_node" required="true"
 	      output="screen" args="$(arg cmdline_arg)"/>
 
-	<node name="tf2_broadcast" pkg="livox_ros_driver" type="tf2_broadcast" args="livox_frame base_link 0 0 0 0 0 0" />
+	<node name="tf2_broadcast" pkg="livox_ros_driver" type="tf2_broadcast" args="livox_frame livox_base 0.042 0 0.0457 0 0 0" />
 
 	<group if="$(arg rviz_enable)">
 		<node name="rviz" pkg="rviz" type="rviz" respawn="true"
