@@ -30,7 +30,10 @@
 	      type="livox_ros_driver_node" required="true"
 	      output="screen" args="$(arg cmdline_arg)"/>
 
-	<node name="tf2_broadcast" pkg="livox_ros_driver" type="tf2_broadcast" args="livox_frame livox_base 0.042 0 0.0457 0 0 0" />
+	<node name="tf2_broadcast" pkg="livox_ros_driver" type="tf2_broadcast" args="livox_frame livox_base 0.042 0 0.0547 0 0 0" />
+	<!-- livox_frame is defined as the center point of the front lens of the sensor --> 
+	<!-- this shifts it down by 45.7 mm (height of Livox from center point to bottom) + 9 mm (half height of mounting bracket)  -->
+	<!-- doing this because need to pivot around center mounting hole in the bracket for the 3D printed adjustable mount -->
 
 	<group if="$(arg rviz_enable)">
 		<node name="rviz" pkg="rviz" type="rviz" respawn="true"
