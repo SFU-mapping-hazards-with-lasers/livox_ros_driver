@@ -10,8 +10,8 @@
             "enable_high_sensitivity": false
         },
         {
-            "broadcast_code": "0TFDG3U99101431",
-            "enable_connect": false,
+            "broadcast_code": "0TFDHB40018Y3B1",
+            "enable_connect": true,
             "return_mode": 0,
             "coordinate": 0,
             "imu_rate": 0,

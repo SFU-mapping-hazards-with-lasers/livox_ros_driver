@@ -609,7 +609,7 @@ ros::Publisher *Lddc::GetCurrentPublisher(uint8_t handle) {
       ROS_INFO("Support multi topics.");
     } else {
       ROS_INFO("Support only one topic.");
-      snprintf(name_str, sizeof(name_str), "livox/lidar");
+      snprintf(name_str, sizeof(name_str), "livox/lidar_old");
     }
 
     *pub = new ros::Publisher;
